@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/res">
+        <file alias="icon">emulator.ico</file>
+    </qresource>
+</RCC>
