@@ -1,5 +1,5 @@
 # Adafruit-OLED-emulator
-# ![alt tag](https://raw.githubusercontent.com/balsa0/Adafruit-OLED-emulator/master/emulator.png)
+![alt tag](https://raw.githubusercontent.com/balsa0/Adafruit-OLED-emulator/master/emulator.png)
 
 License: GPLv2
 Adafruit SSD1306 OLED emulator for development
