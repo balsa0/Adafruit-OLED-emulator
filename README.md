@@ -1,5 +1,5 @@
 # Adafruit-OLED-emulator
-![alt tag](https://raw.githubusercontent.com/balsa0/Adafruit-OLED-emulator/master/emulator.png)
+![alt icon](https://raw.githubusercontent.com/balsa0/Adafruit-OLED-emulator/master/emulator.png)
 
 License: GPLv2
 Adafruit SSD1306 OLED emulator for development
@@ -8,6 +8,9 @@ More info: http://hallard.me/adafruit-ssd1306-oled-display-driver-for-raspberry-
 
 # Requirements
 Uses Qt version 5.4 (Qt creator is optional)
+
+# In action
+https://www.youtube.com/watch?v=OHbGzgvjZ9w
 
 # How to use:
 - Simply write your normal code after "/***PUT YOUR CODE HERE***/" tag in main.cpp
@@ -19,3 +22,5 @@ Uses Qt version 5.4 (Qt creator is optional)
 - You can magnify your emulated screen
 - The program simulates the I/O speed of the real device
 - WARNING! Some functions from Adafruit_GFX.cpp are not yet implemented. If you miss something, look back later! :)
+
+https://www.youtube.com/watch?v=OHbGzgvjZ9w
