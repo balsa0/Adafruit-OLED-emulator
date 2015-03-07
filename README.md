@@ -1,13 +1,17 @@
-# Adafruit-OLED-emulator
-![alt icon](https://raw.githubusercontent.com/balsa0/Adafruit-OLED-emulator/master/emulator.png)
+# ![alt icon](https://raw.githubusercontent.com/balsa0/Adafruit-OLED-emulator/master/emulator.png) Adafruit-OLED-emulator
 
-License: GPLv2
 Adafruit SSD1306 OLED emulator for development
+License: GPLv2
+
 It's a development tool for this library: https://github.com/hallard/ArduiPi_SSD1306
 More info: http://hallard.me/adafruit-ssd1306-oled-display-driver-for-raspberry-pi/
 
 # Requirements
 Uses Qt version 5.4 (Qt creator is optional)
+
+# Contributors
+- Source code by Balázs Kóti (balsa0)
+- PixelMix font created by Andrew Tyler (http://www.dafont.com/pixelmix.font)
 
 # In action
 https://www.youtube.com/watch?v=OHbGzgvjZ9w
