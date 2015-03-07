@@ -22,6 +22,7 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "emulator.h"
 #include <QDebug>
+#include <QFontDatabase>
 
 Adafruit_SSD1306::Adafruit_SSD1306(QWidget *parent)
     : QMainWindow(parent)
@@ -51,12 +52,23 @@ Adafruit_SSD1306::Adafruit_SSD1306(QWidget *parent)
     cursorX = 0;
     cursorY = 0;
     textColor = BLACK;
+    textSize = 1;
 
     //checkers
     began = false;
     initialized = false;
 
     speedEmultaion = true;
+
+    //font
+    QFontDatabase fontDB;
+    fontDB.addApplicationFont(":/font/pixelmix");
+    pixelFont.setFamily("pixelmix");
+    pixelFont.setStyleStrategy(QFont::NoAntialias);
+    pixelFont.setStyleHint(QFont::Monospace);
+    //pixelFont.setPointSize(10);
+    pixelFont.setFixedPitch(true);
+    pixelFont.setPixelSize(8);
 }
 
 Adafruit_SSD1306::~Adafruit_SSD1306()
@@ -219,11 +231,17 @@ void Adafruit_SSD1306::setTextColor(QColor color){
     this->textColor = color;
 }
 
+void Adafruit_SSD1306::setTextSize(int size){
+    this->textSize = size;
+    pixelFont.setPixelSize(8*textSize);
+}
+
 void Adafruit_SSD1306::print(const char *string){
     QString s(string);
 
     QPainter p(writeBuffer);
     p.setPen(textColor);
+    p.setFont(pixelFont);
     p.drawText(cursorX,cursorY,s);
 }
 

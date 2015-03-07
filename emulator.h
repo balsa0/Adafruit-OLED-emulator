@@ -29,6 +29,7 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 #include <QPaintEvent>
 #include <QPixmap>
 #include <QThread>
+#include <QFont>
 
 #include <QMessageBox>
 
@@ -90,11 +91,13 @@ public:
     void fillCircle(int x, int y, int r, int color);
     void drawBitmap(int x, int y, const unsigned char *bitmap, int w, int h, int color);
 
-
+    //font drawing
     void setCursor(int x, int y);
     void setTextColor(QColor color);
+    void setTextSize(int size);
     void print(const char * string);
 
+    //device height/width
     int device_height();
     int device_width();
 
@@ -111,11 +114,15 @@ private:
     QPixmap *writeBuffer,*dispBuffer;
     int dispBufferID,writeBufferID;
 
+    //screen
     int screenWidth, screenHeight;
     int emulatorZoom;
 
+    //fonts and text writing
+    QFont pixelFont;
     int cursorX, cursorY;
     QColor textColor;
+    int textSize;
 
     //checkers
     bool began;
@@ -123,6 +130,7 @@ private:
 
     //speed emulation
     bool speedEmultaion;
+
 
 };
 
