@@ -242,7 +242,7 @@ void Adafruit_SSD1306::print(const char *string){
     QPainter p(writeBuffer);
     p.setPen(textColor);
     p.setFont(pixelFont);
-    p.drawText(cursorX,cursorY,s);
+    p.drawText(cursorX,cursorY+7*textSize,s);
 }
 
 void Adafruit_SSD1306::drawBitmap(int x, int y, const unsigned char *bitmap, int w, int h, QColor color){
